@@ -27,6 +27,7 @@ repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo
 repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f19&arch=$basearch
 repo --name=puppetlabs-products --baseurl=http://yum.puppetlabs.com/fedora/f19/products/$basearch
 repo --name=puppetlabs-deps --baseurl=http://yum.puppetlabs.com/fedora/f19/dependencies/$basearch
+repo --name=home-vbernat --baseurl=http://download.opensuse.org/repositories/home:/vbernat/Fedora_20/
 
 #
 # Add all the packages after the base packages
@@ -87,6 +88,10 @@ binutils
 rubygems
 facter
 net-tools
+
+# packages we need for custom fact scripts
+lshw
+lldpd
 
 #
 # Packages to Remove
